@@ -4,5 +4,6 @@
 Based on the archetype: mvn archetype:generate -Dfilter=io.vertx:
 
 mvn package -> will result in a fat-jar
+
 mvn verify  -> creates a zip-file containing the fatjar and a scripts folder to startup the fatjar automatically
 
