@@ -1,4 +1,5 @@
-vertx_fatjar
+# Vert.x fatjar Example Maven Project
 ============
 
-sample project in order to create a fatjar in a vert.x project
+Starting with the archetype: mvn archetype:generate -Dfilter=io.vertx:
+
