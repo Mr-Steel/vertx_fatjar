@@ -1,4 +1,4 @@
-package com.steel.vertx.verticle;
+package com.wjax.vertx.verticle;
 /*
  * Copyright 2013 Red Hat, Inc.
  *
@@ -18,7 +18,7 @@ package com.steel.vertx.verticle;
  */
 
 import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
+import org.vertx.java.core.http.HttpServerRequest;
 import org.vertx.java.platform.Verticle;
 
 /*
@@ -29,15 +29,15 @@ public class PingVerticle extends Verticle {
     public void start() {
 
 
-        vertx.eventBus().registerHandler("ping-address", new Handler<Message<String>>() {
+        vertx.createHttpServer().requestHandler(new Handler<HttpServerRequest>() {
             @Override
-            public void handle(Message<String> message) {
-                message.reply("pong!");
-                container.logger().info("Sent back pong");
+            public void handle(HttpServerRequest httpServerRequest) {
+                httpServerRequest.response().end("Hello W-JAX 2014");
             }
-        });
+        }).listen(8080);
 
-        container.logger().info("PingVerticle started");
+
+        container.logger().info("Webserver started, listening on port: 8080");
 
     }
 }
