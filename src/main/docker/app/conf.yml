@@ -6,6 +6,6 @@ packaging:
     - target/${project.artifactId}-${project.version}-fat.jar
 # optional list of port to expose on the host
 ports:
-  - 8080
+  - 9090
 
 tag: jax/${project.artifactId}:${project.version}
