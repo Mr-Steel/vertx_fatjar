@@ -1,4 +1,6 @@
-W-JAX 2014 Example project containing
+# Vert.x W-JAX 2014 Example 
+
+This sample project contains:
 
 - Verticles in Java
 - Verticles in Scala
