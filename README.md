@@ -8,8 +8,6 @@ This sample project contains:
 - Build target for a Docker-image
 - Build target for a ZIP file containing a shell-script to start the application
 
-============
-
 Based on the archetype: mvn archetype:generate -Dfilter=io.vertx:
 
 Our build targets:
